@@ -2,10 +2,14 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+// main component for the app
 function Main() {
+  // set base URL for axios
   axios.defaults.baseURL = "http://localhost:3001";
 
+  // state to hold the list of cars for rent
   const [carsForRent, setCarsForRent] = useState([]);
+  // state to hold new car details
   const [newCar, setNewCar] = useState({
     make: "",
     model: "",
@@ -15,8 +19,10 @@ function Main() {
     seller: "",
     features: [],
   });
+  // state to hold the selected image file
   const [selectedImage, setSelectedImage] = useState(null);
 
+  // function to fetch cars from the server
   const fetchCars = async () => {
     try {
       const response = await axios.get("/api/cars");
@@ -26,10 +32,12 @@ function Main() {
     }
   };
 
+  // fetch cars on component mount
   useEffect(() => {
     fetchCars();
   }, []);
 
+  // function to add a new car for rent
   const addCarForRent = async () => {
     try {
       const formData = new FormData();
@@ -48,7 +56,9 @@ function Main() {
         },
       });
 
+      // fetch updated list of cars
       fetchCars();
+      // reset form fields
       setNewCar({
         make: "",
         model: "",
@@ -64,6 +74,7 @@ function Main() {
     }
   };
 
+  // handle image file selection
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     setSelectedImage(file);
@@ -280,7 +291,7 @@ function Main() {
                   alt={`${car.make} ${car.model}`}
                   className="car-image"
                 />
-                <div className="car-info">
+                <div className="ca-info">
                   <div>
                     <strong>
                       {car.make} {car.model} ({car.year})

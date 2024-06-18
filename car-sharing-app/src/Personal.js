@@ -1,23 +1,22 @@
 import React from "react";
-import { users } from "./const";
 import { Link } from "react-router-dom";
 
-function PersonalCabinet() {
+const PersonalCabinet = ({ userInfo }) => {
   return (
     <div className="personal-cabinet">
       <header>
         <nav className="navigation">
           <ul>
-          <li>
-            <Link to="/" className="button">
-              Get a Car
-            </Link>
-          </li>
-          <li>
-            <Link to="/" className="button">
-              Rent Out
-            </Link>
-          </li>
+            <li>
+              <Link to="/" className="button">
+                Get a Car
+              </Link>
+            </li>
+            <li>
+              <Link to="/" className="button">
+                Rent Out
+              </Link>
+            </li>
             <li>
               <Link to="/login" className="button">
                 Log In
@@ -33,19 +32,18 @@ function PersonalCabinet() {
       </header>
 
       <h1>Personal Cabinet</h1>
-      <div className="user-info">
-        <p>
-          <strong>First Name:</strong> {users[0].firstName}
-        </p>
-        <p>
-          <strong>Email:</strong> {users[0].email}
-        </p>
-        <p>
-          <strong>Phone Number:</strong> {users[0].phoneNumber}
-        </p>
-      </div>
+      {userInfo ? (
+        <div className="user-info">
+          <p>
+            <strong>Email:</strong> {userInfo.email}
+          </p>
+          {/* You can add more user information here if needed */}
+        </div>
+      ) : (
+        <p>Loading user info...</p>
+      )}
       <div className="orders">
-        <h2>My orders:</h2>
+        <h2>My Orders:</h2>
         <ul>
           <li>Order #1</li>
           <li>Order #2</li>
@@ -54,6 +52,6 @@ function PersonalCabinet() {
       </div>
     </div>
   );
-}
+};
 
 export default PersonalCabinet;

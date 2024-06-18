@@ -1,4 +1,5 @@
 body {
+  /* reset margin and set default font-family */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -8,29 +9,35 @@ body {
 }
 
 code {
+  /* set font-family for code elements */
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 * {
+  /* reset margin and padding for all elements and set box-sizing to border-box */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  /* set default font-family for the body */
   font-family: Arial, sans-serif;
 }
 
 .App {
+  /* center align text for the App component */
   text-align: center;
 }
 
 .login-container, .personal-cabinet {
+  /* center align text for login and personal cabinet containers */
   text-align: center;
 }
 
 .App-header {
+  /* style for the header in the App component */
   background-color: #282c34;
   padding: 20px 0;
   color: white;
@@ -39,6 +46,7 @@ body {
 }
 
 h1 {
+  /* style for h1 elements */
   color: #00c8ff;
   margin: 10;
   font-size: 32px;
@@ -46,18 +54,21 @@ h1 {
 
 ul,
 .navigation {
+  /* reset list style and padding for ul and navigation */
   list-style: none;
   padding: 0;
 }
 
 li,
 .navigation li {
+  /* set margin-bottom for list items */
   margin-bottom: 0.5em;
 }
 
 button,
 .reservation-button button,
 .login-button {
+  /* style for buttons */
   background-color: #00c8ff;
   color: white;
   padding: 0.5em 1em;
@@ -69,11 +80,13 @@ button,
 button:hover,
 .reservation-button button:hover,
 .login-button:hover {
+  /* hover effect for buttons */
   background-color: #007bff;
 }
 
 .App-section,
 .login-container, .personal-cabinet {
+  /* style for sections and containers */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 40px auto;
   max-width: 600px;
@@ -84,16 +97,19 @@ button:hover,
 }
 
 .section-heading {
+  /* style for section headings */
   font-size: 24px;
   margin-bottom: 20px;
 }
 
 .label {
+  /* style for labels */
   font-size: 18px;
   font-weight: bold;
 }
 
 .input {
+  /* style for input fields */
   width: 95%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -104,12 +120,14 @@ button:hover,
 }
 
 .price-buttons {
+  /* style for price buttons container */
   display: flex;
   justify-content: space-between;
   margin-bottom: 1em;
 }
 
 .price-buttons button {
+  /* style for individual price buttons */
   width: 24%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -120,10 +138,12 @@ button:hover,
 }
 
 .price-buttons button:hover {
+  /* hover effect for price buttons */
   background-color: #007bff;
 }
 
 .car-item {
+  /* style for car item containers */
   margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #ccc;
@@ -137,6 +157,7 @@ button:hover,
 
 .car-details,
 .car-text {
+  /* style for car details and text containers */
   flex-grow: 1;
   display: flex;
   align-items: center;
@@ -144,18 +165,21 @@ button:hover,
 }
 
 .car-image {
+  /* style for car images */
   width: 250px;
   margin-right: 20px;
   border-radius: 8px;
 }
 
 .reservation-button {
+  /* position reservation button */
   position: absolute;
   bottom: 5px;
   right: 5px;
 }
 
 .navigation {
+  /* style for navigation bar */
   position: fixed;
   top: 0;
   left: 0;
@@ -168,11 +192,13 @@ button:hover,
 }
 
 .navigation ul {
+  /* style for navigation list */
   display: flex;
   justify-content: space-around;
 }
 
 .navigation a {
+  /* style for navigation links */
   text-decoration: none;
   color: white;
   padding: 10px 20px;
@@ -181,6 +207,7 @@ button:hover,
 }
 
 .navigation a:hover {
+  /* hover effect for navigation links */
   background-color: #007bff;
   transform: translateY(-2px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
